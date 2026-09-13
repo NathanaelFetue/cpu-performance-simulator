@@ -53,8 +53,10 @@ execution_time = total_cycles / clock_frequency
 ```bash
 mkdir build && cd build
 cmake ..
-make
+cmake --build . //On windows OS
 ```
+
+
 
 ## Running
 
