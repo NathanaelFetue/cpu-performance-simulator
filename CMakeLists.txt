@@ -3,7 +3,15 @@ project(cpu_performance_simulator CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -O2")
+
+# Warning flags differ between compilers: GCC/Clang use -Wall/-Wextra,
+# MSVC (Visual Studio) uses /W4. This keeps the project buildable on
+# both Linux/Mac and Windows without editing CMakeLists.txt per platform.
+if (MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -O2)
+endif()
 
 include_directories(include)
 

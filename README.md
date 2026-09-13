@@ -59,8 +59,8 @@ make
 ## Running
 
 ```bash
-./cpu_sim        # runs the two experiments below
-./test_simulator # runs the unit test suite
+./Debug/cpu_sim        # runs the two experiments below
+./Debug/test_simulator # runs the unit test suite
 ```
 
 ## Experiments
